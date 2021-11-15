@@ -1,3 +1,5 @@
+import time
+from selenium.webdriver.common.keys import Keys
 from Config.config import TestData
 from Pages.BasePages import BasePage
 from selenium.webdriver.common.by import By
@@ -14,6 +16,10 @@ class LoginPage(BasePage):
     SIGNUP_LINK = (By.LINK_TEXT, "Sign Up Now!")
     FACEBOOK_BUTTON = (By.XPATH, '//button[@class="btn btn-social-facebook"]')
     FACEBOOK_CONTINUE = (By.XPATH, '//div[@aria-label="Continue as Toumal"]')
+    EMAIL_GOOGLE = (By.XPATH, '//input[@type="email"]')
+    PASSWORD_GOOGLE = (By.XPATH, '//input[@type="password"]')
+    GOOGLE_BUTTON = (By.XPATH, '//button[@class="btn btn-social-google"]')
+
 
     def __init__(self,driver):
         super().__init__(driver)
@@ -36,6 +42,16 @@ class LoginPage(BasePage):
         self.do_send_keys(self.EMAIL_FB, username)
         self.do_send_keys(self.PASSWORD_FB, password)
         self.do_click(self.FB_BUTTON)
+
+    def do_login_google(self, username,password):
+        self.do_click(self.GOOGLE_BUTTON)
+        time.sleep(2)
+        self.do_send_keys(self.EMAIL_GOOGLE, username)
+        self.do_send_keys(self.EMAIL_GOOGLE, Keys.ENTER )
+        time.sleep(2)
+        self.do_send_keys(self.PASSWORD_GOOGLE, password)
+        self.do_send_keys(self.PASSWORD_GOOGLE, Keys.ENTER)
+        time.sleep(2)
 
 
 
