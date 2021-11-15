@@ -3,6 +3,7 @@ from Pages.BasePages import BasePage
 from selenium.webdriver.common.by import By
 
 
+
 class LoginPage(BasePage):
     EMAIL = (By.ID, "j_username")
     PASSWORD = (By.ID, "j_password")
@@ -23,6 +24,7 @@ class LoginPage(BasePage):
 
     def is_signup_link_exist(self):
         return self.is_visible(self.SIGNUP_LINK)
+
 
     def do_login(self, username, password):
         self.do_send_keys(self.EMAIL, username)

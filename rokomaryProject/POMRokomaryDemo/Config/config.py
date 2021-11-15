@@ -3,7 +3,7 @@ class TestData:
 
     BASE_URL = "https://www.rokomari.com/login"
     HOME_URL = "https://www.rokomari.com/book"
-    USER_NAME = "toumalmojumder@gmail.com"
+    USER_NAME = ""
     PASSWORD = ""
     FB_USER = ""
     FB_PASS = ""
