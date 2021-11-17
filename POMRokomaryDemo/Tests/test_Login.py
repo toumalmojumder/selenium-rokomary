@@ -30,3 +30,4 @@ class Test_Login(BaseTest):
         else:
             allure.attach(self.driver.get_screenshot_as_png(), name="testLoginScreen", attachment_type=AttachmentType.PNG)
             assert False
+

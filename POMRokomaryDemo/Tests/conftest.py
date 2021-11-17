@@ -8,6 +8,5 @@ from Config.config import TestData
 def init_driver(request):
     web_driver = webdriver.Chrome(TestData.CHROME_EXECUTABLE_PATH)
     request.cls.driver = web_driver
-
     yield
     web_driver.close()
