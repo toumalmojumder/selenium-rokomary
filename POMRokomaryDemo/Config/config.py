@@ -4,8 +4,8 @@ class TestData:
     BASE_URL = "https://www.rokomari.com/login"
     HOME_URL = "https://www.rokomari.com/book"
     PROFILE_URL = "https://www.rokomari.com/my-section/profile"
-    USER_NAME = "demo@gmail.com"
-    PASSWORD = "demo123"
+    USER_NAME = "toumalmojumder@gmail.com"
+    PASSWORD = "greencar"
     FB_USER = "demo"
     FB_PASS = "demo123"
 
@@ -23,6 +23,9 @@ class TestData:
     CORPORATE_PAGE_TITLE = "Rokomari.com: Corporate"
     OFFER_PAGE_TITLE = "Offer | Rokomari.com"
     BLOG_PAGE_TITLE = "Home rokomari - রকমারি ব্লগ"
+    LIST_TITLE = "My List | Rokomari.com"
+    NOTIFICATION_TITLE = "Notification | Rokomari.com"
+
 
 
 
@@ -33,4 +36,8 @@ class TestData:
     PERSONAL_PASS = "123456789"
 
     NAME="Toumal Mojumder"
+
+    LIST_TITLE = "My List"
+    List_Description = "My List Description"
+    PRODUCT = "Teach Yourself ASP. NET In 21 Days"
 
