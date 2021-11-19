@@ -15,6 +15,7 @@ class HomePage(BasePage):
     CROSS_BUTTON=(By.XPATH, '//button[@class="rating-modal__close-btn js--rating-modal__close-btn"]')
     CHANGE_INFO = (By.ID, "js--edit-personal")
     NAME = (By.XPATH, '//input[@class="form-control personal p-3 name"]')
+    SIGNOUT = (By.XPATH, '//a[@href="/logout"]')
     SAVE_BUTTON = (By.ID, "personalInfo")
     CART_BUTTON = (By.ID, "js-cart-menu")
     NOTIFICATION_BUTTON = (By.XPATH, '//div[@class="notification-wrapper"]')
@@ -37,6 +38,9 @@ class HomePage(BasePage):
     PRODUCT_DEMO = (By.ID, "ui-id-2")
     SUBMIT = (By.ID, "submit")
     SEAECH_BAR = (By.ID, "js--search")
+    POINT = (By.XPATH, '//a[@href="/my-section/point"]')
+    WISH = (By.XPATH, '//a[@href="/my-section/wish-list"]')
+    REVIEW = (By.XPATH, '//a[@href="/my-section/reviews/not-reviewed?ref=my_review"]')
 
 
 
@@ -115,11 +119,27 @@ class HomePage(BasePage):
         self.do_send_keys(self.SEAECH_BAR, book)
         P_XPATH = "//p[contains(text(),'Teach Yourself ASP. NET In 21 Days')]"
         #return self.driver.find_element_by_xpath().text
-        time.sleep(2)
+        time.sleep(1)
         title = WebDriverWait(self.driver, 60).until(
             EC.presence_of_element_located((By.XPATH, P_XPATH))
          )
         return title.text
+    def do_signout(self):
+        self.do_click(self.PROFILE_BUTTON)
+        time.sleep(1)
+        self.do_click(self.SIGNOUT)
+
+    def go_point(self):
+        self.do_click(self.PROFILE_BUTTON)
+        self.do_click(self.POINT)
+    def go_wish(self):
+        self.do_click(self.PROFILE_BUTTON)
+        self.do_click(self.WISH)
+    def go_review(self):
+        self.do_click(self.PROFILE_BUTTON)
+        self.do_click(self.REVIEW)
+
+
 
 
 

@@ -4,8 +4,8 @@ class TestData:
     BASE_URL = "https://www.rokomari.com/login"
     HOME_URL = "https://www.rokomari.com/book"
     PROFILE_URL = "https://www.rokomari.com/my-section/profile"
-    USER_NAME = "toumalmojumder@gmail.com"
-    PASSWORD = "greencar"
+    USER_NAME = "demo"
+    PASSWORD = "demo123"
     FB_USER = "demo"
     FB_PASS = "demo123"
 
@@ -25,6 +25,9 @@ class TestData:
     BLOG_PAGE_TITLE = "Home rokomari - রকমারি ব্লগ"
     LIST_TITLE = "My List | Rokomari.com"
     NOTIFICATION_TITLE = "Notification | Rokomari.com"
+    POINT_TITLE = "My Rokomari Points | Rokomari.com"
+    WISH_TITLE = "My Wish List | Rokomari.com"
+    REVIEW_TITLE = "My Reviews | Rokomari.com"
 
 
 
